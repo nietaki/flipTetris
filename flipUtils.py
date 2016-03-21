@@ -10,3 +10,9 @@ def readWell(port, length, chunk_size = 100):
         ret = ret + port.read(chunk_size)
         print(len(ret))
     return ret
+
+def saveHex(binary, path):
+    f = open(path, "wb")
+    f.write(bytearray(binary))
+    f.flush()
+    f.close()
